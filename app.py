@@ -2,46 +2,62 @@ import streamlit as st
 import pandas as pd
 
 st.markdown("""
-    <style>
-    /* Main background */
-    .stApp {
-        background-color: #f9f6fc;
-    }
+<style>
+/* --- overall vibe --- */
+.stApp { background-color: #f9f6fc; }
 
-    /* Primary buttons */
-    .stButton > button {
-        background-color: #cdb4db;
-        color: white;
-        border-radius: 8px;
-        border: none;
-        padding: 0.5em 1.2em;
-        font-weight: 600;
-    }
+/* Headings */
+h1, h2, h3 { color: #5e3a7d; }
 
-    .stButton > button:hover {
-        background-color: #b296c9;
-        color: white;
-    }
+/* Buttons */
+.stButton > button {
+  background: #cdb4db !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+.stButton > button:hover { background: #b296c9 !important; }
 
-    /* Radio buttons & multiselect highlight */
-    div[role="radiogroup"] > label > div:first-child,
-    .stMultiSelect div[data-baseweb="tag"] {
-        background-color: #e6d9f2 !important;
-        color: #4b2c5e !important;
-    }
+/* Radio accents (dot + hover) */
+div[role="radiogroup"] * {
+  accent-color: #cdb4db !important;
+}
 
-    /* Input box focus */
-    input:focus, textarea:focus {
-        border-color: #cdb4db !important;
-        box-shadow: 0 0 0 0.2rem rgba(205, 180, 219, 0.25) !important;
-    }
+/* --- MULTISELECT FIXES --- */
+/* The outer input border */
+div[data-baseweb="select"] > div {
+  border-color: #cdb4db !important;
+}
 
-    /* Headers */
-    h1, h2, h3 {
-        color: #5e3a7d;
-    }
-    </style>
+/* Focus/active border + glow */
+div[data-baseweb="select"] > div:focus-within {
+  border-color: #cdb4db !important;
+  box-shadow: 0 0 0 0.2rem rgba(205, 180, 219, 0.25) !important;
+}
+
+/* The selected “chips/tags” background (yours are red right now) */
+div[data-baseweb="tag"] {
+  background-color: #e6d9f2 !important;
+  color: #4b2c5e !important;
+  border: 1px solid #cdb4db !important;
+}
+
+/* The little “x” close icon inside the chips */
+div[data-baseweb="tag"] span {
+  color: #4b2c5e !important;
+}
+
+/* Placeholder / typed text color */
+div[data-baseweb="select"] input {
+  color: #4b2c5e !important;
+}
+div[data-baseweb="select"] input::placeholder {
+  color: rgba(75, 44, 94, 0.55) !important;
+}
+</style>
 """, unsafe_allow_html=True)
+
 
 
 st.set_page_config(page_title="Property Distance Sorter", layout="wide")
