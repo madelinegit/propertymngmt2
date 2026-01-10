@@ -1,6 +1,49 @@
 import streamlit as st
 import pandas as pd
 
+st.markdown("""
+    <style>
+    /* Main background */
+    .stApp {
+        background-color: #f9f6fc;
+    }
+
+    /* Primary buttons */
+    .stButton > button {
+        background-color: #cdb4db;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 0.5em 1.2em;
+        font-weight: 600;
+    }
+
+    .stButton > button:hover {
+        background-color: #b296c9;
+        color: white;
+    }
+
+    /* Radio buttons & multiselect highlight */
+    div[role="radiogroup"] > label > div:first-child,
+    .stMultiSelect div[data-baseweb="tag"] {
+        background-color: #e6d9f2 !important;
+        color: #4b2c5e !important;
+    }
+
+    /* Input box focus */
+    input:focus, textarea:focus {
+        border-color: #cdb4db !important;
+        box-shadow: 0 0 0 0.2rem rgba(205, 180, 219, 0.25) !important;
+    }
+
+    /* Headers */
+    h1, h2, h3 {
+        color: #5e3a7d;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 st.set_page_config(page_title="Property Distance Sorter", layout="wide")
 st.title("Property Distance Sorter")
 
