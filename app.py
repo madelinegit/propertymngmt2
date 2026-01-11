@@ -3,13 +3,17 @@ import pandas as pd
 
 st.markdown("""
 <style>
-/* --- overall vibe --- */
-.stApp { background-color: #f9f6fc; }
+/* --- overall background --- */
+.stApp {
+  background-color: #f9f6fc;
+}
 
-/* Headings */
-h1, h2, h3 { color: #5e3a7d; }
+/* --- headers --- */
+h1, h2, h3 {
+  color: #5e3a7d;
+}
 
-/* Buttons */
+/* --- buttons --- */
 .stButton > button {
   background: #cdb4db !important;
   color: white !important;
@@ -17,38 +21,51 @@ h1, h2, h3 { color: #5e3a7d; }
   border-radius: 10px !important;
   font-weight: 600 !important;
 }
-.stButton > button:hover { background: #b296c9 !important; }
-
-/* Radio accents (dot + hover) */
-div[role="radiogroup"] * {
-  accent-color: #cdb4db !important;
+.stButton > button:hover {
+  background: #b296c9 !important;
 }
 
-/* --- MULTISELECT FIXES --- */
-/* The outer input border */
+/* --- MULTISELECT container border --- */
 div[data-baseweb="select"] > div {
   border-color: #cdb4db !important;
 }
 
-/* Focus/active border + glow */
+/* focus ring */
 div[data-baseweb="select"] > div:focus-within {
   border-color: #cdb4db !important;
   box-shadow: 0 0 0 0.2rem rgba(205, 180, 219, 0.25) !important;
 }
 
-/* The selected “chips/tags” background (yours are red right now) */
+/* --- THE RED CHIPS (this is the main fix) --- */
 div[data-baseweb="tag"] {
   background-color: #e6d9f2 !important;
   color: #4b2c5e !important;
   border: 1px solid #cdb4db !important;
 }
 
-/* The little “x” close icon inside the chips */
+/* chip text */
 div[data-baseweb="tag"] span {
   color: #4b2c5e !important;
 }
 
-/* Placeholder / typed text color */
+/* chip remove “x” */
+div[data-baseweb="tag"] svg {
+  fill: #4b2c5e !important;
+}
+
+/* --- RADIO BUTTONS --- */
+
+/* outer circle */
+input[type="radio"] {
+  accent-color: #cdb4db !important;
+}
+
+/* label text */
+label {
+  color: #4b2c5e !important;
+}
+
+/* --- placeholder + typed text --- */
 div[data-baseweb="select"] input {
   color: #4b2c5e !important;
 }
@@ -57,6 +74,7 @@ div[data-baseweb="select"] input::placeholder {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
