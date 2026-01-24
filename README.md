@@ -18,7 +18,7 @@ The Property Distance Sorter allows a user to:
 - Choose a sort direction (Closest → Farthest or Farthest → Closest)
 - Instantly view the selected properties ordered by distance
 
-The goal is to reduce manual sorting, mental math, and spreadsheet friction when planning routes or grouping properties for operational efficiency.
+The goal is to reduce manual sorting, mental math, and dependence on accuracy of unit zones when planning routes or grouping properties for operational efficiency.
 
 ---
 
@@ -84,7 +84,7 @@ The UI uses a soft lavender / purple theme with:
 - Custom button styling
 - Custom multiselect chip styling
 - Custom radio button accents
-- Branded favicon (purple mountain icon)
+- Branded favicon (mountain icon)
 
 Styling is applied using injected CSS directly within the Streamlit app.
 
@@ -94,12 +94,16 @@ Styling is applied using injected CSS directly within the Streamlit app.
 
 This tool is designed for scenarios such as:
 
-- Grouping nearby ski lease homes
 - Optimizing hot tub service routes
 - Planning inspection batches
 - Coordinating snow removal dispatch
 - Reducing drive time between properties
 - Improving vendor scheduling efficiency
+
+## Upcoming Use Cases
+- Identify STR, Lease, or Both categorization of home
+- Identify Unit Zone and Differentiating between TD 1, 2, 3, 4 quadrants
+- Identify properties with null data 
 
 While simple in concept, it forms the foundation for more advanced routing, zoning, and operational intelligence tooling.
 
