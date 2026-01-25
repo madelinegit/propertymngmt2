@@ -55,7 +55,7 @@ This makes it ideal for internal tools, operations dashboards, and workflow auto
 
 ---
 
-## How It Works (High Level)
+## How It Works (Logic)
 
 1. The user uploads an Excel file containing:
    - `Property Name`
@@ -102,7 +102,7 @@ This tool is designed for scenarios such as:
 
 ## Upcoming Use Cases
 - Identify STR, Lease, or Both categorization of home
-- Identify Unit Zone and Differentiating between TD 1, 2, 3, 4 quadrants
+- Identify Unit Zone and Tahoe Donner Unit Zone, Differentiating between TD 1, 2, 3, 4 quadrants
 - Identify properties with null data 
 
 While simple in concept, it forms the foundation for more advanced routing, zoning, and operational intelligence tooling.
